@@ -55,8 +55,8 @@ Total_missing_values <- sum(is.na(activity))
 
 Number of missing values in the dataset are `r Total_missing_values`
 
-```{r echo=TRUE, results=FALSE}
-library(mi)
+```{r echo=FALSE}
+suppressWarnings(suppressMessages(library(mi)))
 ```
 
 ```{r echo=TRUE}

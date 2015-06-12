@@ -5,7 +5,7 @@
 
 
 ```r
-activity <- read.csv("C:/Users/Srinivas/Documents/activity.csv")
+activity <- read.csv("activity.csv")
 ```
 
 ## What is mean total number of steps taken per day?
@@ -63,50 +63,6 @@ Total_missing_values <- sum(is.na(activity))
 Number of missing values in the dataset are 2304
 
 
-```r
-library(mi)
-```
-
-```
-## Warning: package 'mi' was built under R version 3.1.3
-```
-
-```
-## Loading required package: arm
-```
-
-```
-## Warning: package 'arm' was built under R version 3.1.3
-```
-
-```
-## Loading required package: MASS
-## Loading required package: Matrix
-## Loading required package: lme4
-```
-
-```
-## Warning: package 'lme4' was built under R version 3.1.3
-```
-
-```
-## Loading required package: Rcpp
-## 
-## arm (Version 1.8-4, built: 2015-04-07)
-## 
-## Working directory is C:/Users/Srinivas/RepData_PeerAssessment1
-## 
-## Loading required package: mi
-```
-
-```
-## Warning: package 'mi' was built under R version 3.1.3
-```
-
-```
-## 
-## mi (Version 0.10-2, built: 2015-04-07)
-```
 
 
 ```r
@@ -127,9 +83,9 @@ steps_imputed_median <- median(steps_per_day.imputed$steps)
 ```
 ####The mean and median after imputing the missing values
 
-mean(imputed) = 10809
+mean(imputed) = 10775
 
-median(imputed) = 10804
+median(imputed) = 10765
 
 #### histogram of the total number of steps taken each day with the imputed data
 
@@ -155,7 +111,7 @@ str(activity.imputed)
 
 ```
 ## 'data.frame':	17568 obs. of  4 variables:
-##  $ steps   : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ steps   : int  0 21 0 0 0 0 0 31 12 0 ...
 ##  $ date    : Factor w/ 61 levels "10/1/2012","10/10/2012",..: 1 1 1 1 1 1 1 1 1 1 ...
 ##  $ interval: int  0 5 10 15 20 25 30 35 40 45 ...
 ##  $ day     : Factor w/ 2 levels "weekday","weekend": 1 1 1 1 1 1 1 1 1 1 ...
